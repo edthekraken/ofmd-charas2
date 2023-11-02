@@ -76,7 +76,12 @@ var namMember = new Array(
  
 //*********************************************************
  
-namMember.shuffle();
+for (let i = namMember.length -1; i > 0; i--) {
+  let j = Math.floor(Math.random() * (i+1));
+  let k = namMember[i];
+  namMember[i] = namMember[j];
+  namMember[j] = k;
+}
  
 var lstMember = new Array();
  
